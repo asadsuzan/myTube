@@ -1,10 +1,11 @@
-import './App.css';
+import NavBar from "./components/NavBar";
+
 
 function App() {
   return (
-    <div className="App">
-   <h1 className='text-info'>my tube is a clone project of youtube web app </h1>
-    </div>
+   <>
+    <NavBar/>
+   </>
   );
 }
 
