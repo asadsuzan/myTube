@@ -10,9 +10,9 @@ const FeedContent = ({videos}) => {
            return(
             <div key={index} >
             {/* video card is here  */}
-            {item.id.videoId && <VideoCard item= {item}/>}
+            {item.id.videoId && <VideoCard videoDetails= {item}/>}
             {/* chanel card is here  */}
-            {item.id.channelId && <ChenelCard item= {item}/>}
+            {item.id.channelId && <ChenelCard ChenelDetails= {item}/>}
 
             </div>
            ) 

@@ -90,7 +90,7 @@ a {
 .category-btn {
   cursor: pointer;
   gap: 7px;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: all 0.2s linear;
 }
 .category-btn:hover {
@@ -130,7 +130,7 @@ a {
   margin: 0;
 }
 .chenel-title {
-  color: gray;
+  color: var(--title-color);
   font-size: 12px;
   font-weight: 500;
 }
@@ -140,3 +140,21 @@ a {
   border-radius: 50%;
 }
 /* <========================cards- styles end <================================ */
+
+/* <========================chenel-details start <================================ */
+.chenel-details {
+  background-color: var(--dark-black);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  margin-top: 80px;
+}
+.banner {
+  background: rgb(2, 0, 36);
+  height: 250px;
+  width: 100%;
+}
+.banner .chenelCard {
+  transform: translateY(100px);
+  box-shadow: none !important;
+}
+/* <========================chenel-details end <================================ */ ;

@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import ChenelDetails from "./components/ChenelDetails";
 import Feeds from "./components/Feeds";
 import NavBar from "./components/NavBar";
 
@@ -12,6 +13,7 @@ function App() {
     <NavBar/>
      <Routes>
       <Route path="/" element={<Feeds/>}/>
+      <Route path="/chenel/:id" element={<ChenelDetails/>}/>
      </Routes>
    </>
   );

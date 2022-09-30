@@ -6,6 +6,8 @@ import SideBar from './SideBar'
 const Feeds = () => {
   const [selectedCategory,setSelectedCategory] = useState('New')
   const [videos,setVideos] = useState([])
+  
+  // fetch videos by selectedCategory
   useEffect(() => {
     fetchApi(`search?part=snippet&q=${selectedCategory}`)
       .then((data) =>setVideos(data.items))
