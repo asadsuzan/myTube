@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { categories } from '../utils/constants'
+import fetchApi from '../utils/fetchApi'
 import SideBar from './SideBar'
 
 const Feeds = () => {
   const [selectedCategory,setSelectedCategory] = useState('New')
+   
+  useEffect(() => {
 
+
+    fetchApi(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) =>console.log(data))
+    }, [selectedCategory]);
+   
   return (
     <div className='feeds d-flex justify-content-center align-items-center'>
       {/* side bar is here  */}
