@@ -105,12 +105,38 @@ a {
 }
 /* <========================side bar styles end <================================ */
 
-/* <========================cards-wrapper styles start <================================ */
-.videos-wrapper {
-  background-color: var(--dark-black);
+/* <========================feed-content-box styles start <================================ */
+.feed-content-box {
   width: 100%;
-  /* margin-top: 80px; */
   height: calc(100vh - 80px);
+  background-color: var(--dark-black);
   overflow-y: auto;
 }
-/* <========================cards-wrapper styles end <================================ */
+.feed-content {
+  gap: 10px;
+}
+/* <========================feed-content-box styles end <================================ */
+
+/* <========================cards styles start <================================ */
+
+.videoCard,
+.chenelCard {
+  width: 260px;
+  min-height: 250px;
+}
+.video-title {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+.chenel-title {
+  color: gray;
+  font-size: 12px;
+  font-weight: 500;
+}
+.chenelCard img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+/* <========================cards- styles end <================================ */

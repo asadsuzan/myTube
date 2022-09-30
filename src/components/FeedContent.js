@@ -2,14 +2,16 @@ import React from 'react'
 import ChenelCard from './ChenelCard'
 import VideoCard from './VideoCard'
 
-const Videos = ({videos}) => {
+const FeedContent = ({videos}) => {
   return (
-    <div className='d-flex flex-wrap justify-content-center' style={{gap:"20px"}}>
+    <div className='d-flex flex-wrap justify-content-center feed-content'>
       {
         videos.map((item,index)=>{
            return(
             <div key={index} >
+            {/* video card is here  */}
             {item.id.videoId && <VideoCard item= {item}/>}
+            {/* chanel card is here  */}
             {item.id.channelId && <ChenelCard item= {item}/>}
 
             </div>
@@ -22,4 +24,4 @@ const Videos = ({videos}) => {
   )
 }
 
-export default Videos
+export default FeedContent

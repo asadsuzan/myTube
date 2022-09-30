@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { categories } from '../utils/constants'
 import fetchApi from '../utils/fetchApi'
+import FeedContent from './FeedContent'
 import SideBar from './SideBar'
-import Videos from './Videos'
 
 const Feeds = () => {
   const [selectedCategory,setSelectedCategory] = useState('New')
@@ -15,11 +14,11 @@ const Feeds = () => {
   return (
     <div className='feeds d-flex justify-content-center '>
       {/* side bar is here  */}
-      <SideBar credentials = {{selectedCategory,setSelectedCategory,categories}}/>
-      {/* video and charnel card is here  */}
-      <div className='videos-wrapper px-3'>
+      <SideBar credentials = {{selectedCategory,setSelectedCategory}}/>
+      {/* feed content is here  */}
+      <div className='feed-content-box px-3'>
         <p className='fs-2'> <span className='text-danger'>{selectedCategory}</span> Videos</p>
-        <Videos videos= {videos}/>
+        <FeedContent videos= {videos}/>
       </div>
     </div>
   )
