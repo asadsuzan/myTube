@@ -7,8 +7,8 @@ const NavBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    navigate(`/search/${searchFor}`)
-    setSearchFor('')
+   navigate(`/search/${searchFor}`)
+   setSearchFor('')
   }
 
   return (
@@ -21,7 +21,7 @@ const NavBar = () => {
 
       {/* search bar is here  */}
       <form className='d-flex align-items-center' onSubmit={handleSearch}>
-        <input type="text" name='searchbar' value={searchFor} onChange={(e) => setSearchFor(e.target.value)} className='search-filed' />
+        <input type="text" name='searchbar' required value={searchFor} onChange={(e) => setSearchFor(e.target.value)} className='search-filed' />
         <button className='search-btn' type='submit'>
           <BiSearchAlt2 color='#fff' />
         </button>
