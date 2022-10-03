@@ -157,4 +157,14 @@ a {
   transform: translateY(100px);
   box-shadow: none !important;
 }
-/* <========================chenel-details end <================================ */ ;
+/* <========================chenel-details end <================================ */
+
+/* <========================searchFeed start <================================ */
+.searchFeed {
+  height: calc(100vh - 80px);
+  gap: 30px;
+  margin-top: 80px;
+  overflow-y: auto;
+  background-color: var(--dark-black);
+}
+/* <========================searchFeed end <================================ */

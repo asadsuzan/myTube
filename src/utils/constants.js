@@ -12,6 +12,7 @@ import { SiGooglepodcasts } from 'react-icons/si'
 export const categories = [
   { name: 'New', icon: <AiFillHome />, },
   { name: 'JS Mastery', icon: <BiCodeAlt />, },
+  { name: 'Thapa Technical', icon: <BiCodeAlt />, },
   { name: 'Coding', icon: <BiCodeAlt />, },
   { name: 'ReactJS', icon: <BiCodeAlt />, },
   { name: 'NextJS', icon: <BiCodeAlt />, },

@@ -28,7 +28,7 @@ const ChenelDetails = () => {
        {/* chenel videos  is here  */}
       <div className="d-flex flex-wrap justify-content-center mt-5 pt-5" style={{gap:"10px"}}>
       {
-        channelVideos?.map(video=><VideoCard videoDetails={video}/>)
+        channelVideos?.map((video,index)=><VideoCard key={index} videoDetails={video}/>)
      }
       </div>
 

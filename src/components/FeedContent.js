@@ -6,13 +6,13 @@ const FeedContent = ({videos}) => {
   return (
     <div className='d-flex flex-wrap justify-content-center feed-content'>
       {
-        videos.map((item,index)=>{
+        videos.map((video,index)=>{
            return(
             <div key={index} >
             {/* video card is here  */}
-            {item.id.videoId && <VideoCard videoDetails= {item}/>}
+            {video.id.videoId && <VideoCard videoDetails= {video}/>}
             {/* chanel card is here  */}
-            {item.id.channelId && <ChenelCard ChenelDetails= {item}/>}
+            {video.id.channelId && <ChenelCard ChenelDetails= {video}/>}
 
             </div>
            ) 
