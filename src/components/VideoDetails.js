@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import ReactPlayer from 'react-player'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import fetchApi from '../utils/fetchApi'
+import Loader from './Loader'
 import VideoCard from './VideoCard'
 
 
@@ -10,7 +11,7 @@ const VideoDetails = () => {
   const [videoDetails, setVideoDetails] = useState(null)
   const [relatedVideos, setRelatedVideos] = useState([])
   const { id } = useParams()
-  console.log(relatedVideos)
+console.log(videoDetails)
   useEffect(() => {
     fetchApi(`videos?part=snippet,statistics&id=${id}`)
       .then((data) => setVideoDetails(data?.items[0]))
@@ -19,7 +20,7 @@ const VideoDetails = () => {
       .then(data => setRelatedVideos(data?.items))
   }, [id])
 
-  if (!videoDetails) return 'loading'
+  if (!videoDetails || !relatedVideos) return <Loader/>
   return (
 
     <div className='video-detail px-2 d-flex md-column'>
@@ -29,7 +30,9 @@ const VideoDetails = () => {
           <div>
             <span className='d-block fs-5'>{videoDetails?.snippet?.title}</span>
             <div className='pt-2'>
-              <span className='me-1'>{videoDetails?.snippet?.channelTitle}</span>
+            <Link to={`/chenel/${videoDetails?.snippet?.channelId}`}>
+            <span className='me-1 text-light' style={{fontSize:"13px"}}>{videoDetails?.snippet?.channelTitle}</span>
+            </Link>
               <AiFillCheckCircle color='gray' />
             </div>
           </div>

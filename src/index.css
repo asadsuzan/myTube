@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,15 @@ a {
   --title-color: rgb(154, 154, 154);
   --heading-color: #f1f4e1;
   --red-color: red;
+}
+.loader {
+  height: calc(100vh - 80px);
+  background-color: var(--dark-black);
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 /* <==================== preventing  default styles start <===================== */
 
@@ -128,6 +138,7 @@ a {
   font-size: 13px;
   padding: 0;
   margin: 0;
+  color: #fff;
 }
 .chenel-title {
   color: var(--title-color);
@@ -153,6 +164,9 @@ a {
   height: 250px;
   width: 100%;
 }
+.banner a {
+  pointer-events: none;
+}
 .banner .chenelCard {
   transform: translateY(100px);
   box-shadow: none !important;
@@ -172,7 +186,6 @@ a {
   height: calc(100vh - 80px);
   margin-top: 80px;
   overflow-y: auto;
-  /* gap: 10px; */
   background-color: var(--dark-black);
 }
 .react-player {

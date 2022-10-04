@@ -2,18 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import fetchApi from '../utils/fetchApi';
 import ChenelCard from './ChenelCard';
+import Loader from './Loader';
 import VideoCard from './VideoCard';
 
 const SearchFeed = () => {
 
   const [videos, setVideos] = useState([])
   const { searchFor } = useParams()
+  const [loading,setLoading] = useState(false)
 
   // fetch videos by search query
   useEffect(() => {
+    setLoading(true)
     fetchApi(`search?part=snippet&q=${searchFor}`)
       .then((data) => setVideos(data.items))
+      setLoading(false)
+
   }, [searchFor]);
+  if(loading) return <Loader/>
   return (
     <div className='searchFeed'>
       {/* page title is here  */}

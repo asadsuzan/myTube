@@ -12,7 +12,7 @@ function App() {
    <>
     <NavBar/>
      <Routes>
-      <Route path="/" element={<Feeds/>}/>
+      <Route path="/" exact  element={<Feeds/>}/>
       <Route path="chenel/:id" element={<ChenelDetails/>}/>
       <Route path="video/:id" element={<VideoDetails/>}/>
       <Route path="search/:searchFor" element={<SearchFeed/>}/>

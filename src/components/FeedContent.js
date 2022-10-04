@@ -1,8 +1,10 @@
 import React from 'react'
 import ChenelCard from './ChenelCard'
+import Loader from './Loader'
 import VideoCard from './VideoCard'
 
 const FeedContent = ({videos}) => {
+  if(!videos) return <Loader/>
   return (
     <div className='d-flex flex-wrap justify-content-center feed-content'>
       {

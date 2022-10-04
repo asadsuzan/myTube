@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import fetchApi from '../utils/fetchApi'
 import FeedContent from './FeedContent'
+import Loader from './Loader'
 import SideBar from './SideBar'
 
 const Feeds = () => {
   const [selectedCategory,setSelectedCategory] = useState('New')
   const [videos,setVideos] = useState([])
+
   
   // fetch videos by selectedCategory
   useEffect(() => {
+
     fetchApi(`search?part=snippet&q=${selectedCategory}`)
       .then((data) =>setVideos(data.items))
-    }, [selectedCategory]);
    
+    }, [selectedCategory,videos]);
+     
+    if(!videos) return <Loader/>
+
   return (
     <div className='feeds d-flex justify-content-center '>
       {/* side bar is here  */}

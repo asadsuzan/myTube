@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import fetchApi from '../utils/fetchApi'
 import ChenelCard from './ChenelCard'
+import Loader from './Loader'
 import VideoCard from './VideoCard'
 
 const ChenelDetails = () => {
@@ -18,6 +19,7 @@ const ChenelDetails = () => {
     .then(data=>setChannelVideos(data?.items))
      
   },[id])
+  if (!ChenelDetail || !channelVideos) return <Loader/>
   return (
     <div className='chenel-details'>
       <div className="banner d-flex justify-content-center align-items-center">
