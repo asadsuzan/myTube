@@ -196,3 +196,41 @@ a {
   overflow-y: auto;
 }
 /* <========================video-detail  end <================================ */
+
+/* <======================== media queries  end <================================ */
+@media screen and (max-width: 767px) {
+  .search-filed {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .app-logo span:nth-child(1) {
+    font-size: 1.7rem;
+  }
+  .app-logo span:nth-child(2) {
+    font-size: 1rem;
+  }
+  .video-detail {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .react-player {
+    height: 600px !important;
+  }
+  .related-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 686px) {
+  .videoCard,
+  .chenelCard {
+    width: 100% !important;
+  }
+  .videoCard img,
+  .chenelCard img {
+    width: 100% !important;
+  }
+}
+/* <======================== media queries  end <================================ */

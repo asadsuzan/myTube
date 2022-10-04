@@ -20,7 +20,7 @@ const NavBar = () => {
       </div></Link>
 
       {/* search bar is here  */}
-      <form className='d-flex align-items-center' onSubmit={handleSearch}>
+      <form className='d-flex align-items-center justify-content-end' style={{flex:'1'}} onSubmit={handleSearch}>
         <input type="text" name='searchbar' required value={searchFor} onChange={(e) => setSearchFor(e.target.value)} className='search-filed' />
         <button className='search-btn' type='submit'>
           <BiSearchAlt2 color='#fff' />

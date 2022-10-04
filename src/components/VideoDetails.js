@@ -11,7 +11,6 @@ const VideoDetails = () => {
   const [videoDetails, setVideoDetails] = useState(null)
   const [relatedVideos, setRelatedVideos] = useState([])
   const { id } = useParams()
-console.log(videoDetails)
   useEffect(() => {
     fetchApi(`videos?part=snippet,statistics&id=${id}`)
       .then((data) => setVideoDetails(data?.items[0]))
@@ -23,7 +22,7 @@ console.log(videoDetails)
   if (!videoDetails || !relatedVideos) return <Loader/>
   return (
 
-    <div className='video-detail px-2 d-flex md-column'>
+    <div className='video-detail px-2 d-flex'>
       <div className='react-player' >
         <ReactPlayer controls playing url={`https://www.youtube.com/watch?v=${id}`} width="100%" height={'80%'} />
         <div className='mt-3 d-flex justify-content-between align-items-center'>
