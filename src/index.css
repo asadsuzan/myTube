@@ -45,6 +45,15 @@ a {
   align-items: center;
   z-index: 9999;
 }
+.not-found {
+  height: calc(100vh - 80px);
+  background-color: var(--dark-black);
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 /* <==================== preventing  default styles start <===================== */
 
 /* <========================nav bar styles start <================================ */
